@@ -32,8 +32,13 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-page="/Index">Home</a></li>
                     <li><a asp-page="/Hello">Hello</a></li>
+                    <li><a asp-page="/Converter">Converter</a></li>
                     <li><a asp-page="/About">About</a></li>
                     <li><a asp-page="/Contact">Contact</a></li>
+                    <li><a asp-page="/Students/Index">Students</a></li>
+                    <li><a asp-page="/Courses/Index">Courses</a></li>
+                    <li><a asp-page="/Tutors/Index">Instructors</a></li>
+                    <li><a asp-page="/Departments/Index">Departments</a></li>
                 </ul>
             </div>
         </div>
@@ -44,9 +49,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; 2019 - ACG_CoreRazorContoso</p>
-        </footer>
+        @*<partial name="_Footer"/>*@
     </div>
 
     <environment include="Development">

@@ -1,0 +1,30 @@
+﻿@page
+@model ACG_CoreRazorContoso.Pages.ConverterModel
+@{
+    ViewData["Title"] = "Hello";
+}
+
+<header class="jumbotron">
+<h2>CO550 Razor Page Converter</h2>
+<h4>Pounds to Euro Conversion</h4>
+<p>
+    Current rate is : 1 Pound = 1.12 Euro
+</p>
+</header>
+<section>
+     <form method="Post">
+ 
+         <label>GBP Value</label>
+         <input id="GBP" type="number" asp-for="Pounds" placeholder="From currency" requried />
+         <input type="submit" />
+
+         <p>
+             @if (this.Model.Pounds != 0)
+              {
+                 <span>dollars </span>@this.Model.Dollars
+                 
+              }
+         </p>
+
+     </form>
+</section>

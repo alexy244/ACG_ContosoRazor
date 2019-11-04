@@ -12,27 +12,19 @@
 </p>
 </header>
 <section>
- <from>
-     <label>Enter your name:</label>
-     <input type="text" asp-for="Name" placeholder="Please Enter Your Name" requried />
-     <input type="submit" />
+     <form method="Post">
+ 
+         <label>Enter your name:</label>
+         <input id="Name" type="text" asp-for="Name" placeholder="Please Enter Your Name" requried />
+         <input type="submit" />
 
-     <p>
+         <p>
+             @if (this.Model.Name != null)
+              {
+                 <span>Hello </span>@this.Model.Name
+                 <span>, how are you ?</span>
+              }
+         </p>
 
-         @if (this.Model.Name != null)
-          {
-
-             <span>Hello </span>@this.Model.Name
-             <span>, how are you ?</span>
-
-          }
-
-
-
-
-     </p>
-
-
-
- </from>
+     </form>
 </section>
